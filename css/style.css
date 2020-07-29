@@ -45,6 +45,7 @@ img {
 	background-color: rgb(230, 247, 247);
 	height:100%;
 	color: #5C5C5C;
+	padding-right: 10px;
 	padding-bottom: 20px;
 	font-size: 1em;
 	padding-bottom: 60px;
@@ -119,17 +120,12 @@ img {
 	padding-left: 1em;
 }
 
-.column {
-  float: left;
-  width: 50%;
-  padding: 5px;
-}
 .right {
 	float: right;
 	margin-top: 10px;
 }
 .left {
-	float: right;
+	float: left;
 	margin-top: 10px;
 }
 
@@ -157,6 +153,7 @@ skill-pic {
 /* ---- Page Elements ---- */
 
 .logo {
+	float: right;
 	width: 180px;
 	padding-top: 20px;
 
@@ -172,15 +169,29 @@ skill-pic {
 		flex-direction: row-reverse;
 	}
 
+	.description-h {
+		float: left;
+	}
+
 	.container {
 		width: 90%;
 		margin: 0 auto;
 	}
-	.left
-	.right {
-		width: 50%; 
-		height: 38%;
-		object-fit: cover;
+
+	.column {
+		float: left;
+	}
+	
+	.row  {
+		float: inline-end;
+	}
+
+  .left
+  .right {
+    width: 48%; 
+    height: 38%;
+    object-fit: cover;
+
 
 	}
 	.name,
@@ -220,6 +231,12 @@ margin-left: 50px;
 padding: 10px;
 }
 
+.banner::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
 	.clearfix::after {
 		content: " ";
 		display: table;
@@ -236,11 +253,10 @@ padding: 10px;
 @media (min-width: 1025px) {
 		
 	.banner {
-		display: inline;
+		display: flex;
 		margin:	auto;
 		flex-direction: row-reverse;
 		justify-content: space-around;
-		width: 100%;
 	}
 	
 	.description-h {
@@ -262,6 +278,11 @@ padding: 10px;
 	.tertiary {
 		width: 33.333%;
 	}
+	.left,
+	.right {
+		width:48%;
+	}
+
 
 .main-footer {
 	display: flex;
