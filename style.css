@@ -1,0 +1,338 @@
+
+* {
+	text-align: center;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	width: 100%;
+}
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+.banner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: auto;
+	background-color: rgb(230, 247, 247);
+	height:100%;
+	color: #5C5C5C;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	font-size: 1em;
+	padding-bottom: 60px;
+}
+.description-h{
+  font-size: 1.25rem;
+  margin-left: 60px;
+  margin-right: 20px;
+	color: rgb(126, 126, 126);
+}
+.description{
+  font-size: 1.2rem;
+  margin-left: 20px;
+  margin-right: 20px;
+	color: rgb(126, 126, 126);
+}
+.name {
+  font-size: 1.25em;
+	margin: 0px;
+}
+.main-nav {
+	 margin-top: 5px;
+}
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+.main-nav a {
+	font-size: .95em;
+	color: #162524;
+	text-transform: uppercase;
+}
+.main-nav a:hover {
+	color: #099af5;
+}
+.main-footer a:hover {
+	color: #099af5;
+	
+}
+.main-footer{
+	text-align: center;
+	background: #d9e4ea;
+	padding: 2em 0;
+	margin-top: 10px;
+	overflow: hidden;
+	text-transform: uppercase;
+}
+
+.nav-footer {
+	display: hidden;
+}
+
+.contact {
+	justify-content: center;
+	width: 100%;
+	background-color: rgb(230, 247, 247);
+	height:100%;
+	color: #5c5c5c;
+	padding-bottom: 20px;
+	font-size: 1em;
+	padding-bottom: 60px;
+
+}
+
+/* ---- Layout Containers ---- */
+
+.main-header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.right {
+	float: right;
+	margin-top: 10px;
+	object-fit: cover;
+}
+.left {
+	float: left;
+	margin-top: 10px;
+	object-fit: cover;
+}
+
+#skills {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+skill-pic {
+	width: 50%;
+	object-fit: cover;
+}
+.skill-text{
+	width: 70%;
+	justify-content: center;
+	font-size: 1.2rem;
+  margin-left: auto;
+  margin-right: 0;
+	color: rgb(126, 126, 126);
+}
+
+/* ---- Page Elements ---- */
+
+.logo {
+	float: right;
+	width: 180px;
+	padding-top: 20px;
+
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 768px) {
+	
+	.banner {
+		flex-direction: row-reverse;
+	}
+
+	.description-h {
+		float: left;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	.column {
+		float: left;
+	}
+	
+	.row  {
+		float: inline-end;
+	}
+
+  .left
+  .right {
+    width: 48%; 
+    height: 38%;
+    object-fit: cover;
+
+	}
+	.name,
+	.col  {
+		float: left;
+	}
+	.primary,
+	.secondary,
+	.tertiary {
+		width: 48%;
+	}
+	.main-nav { 
+		float:right;
+	}
+	.main-nav li  {
+		display: inline-block;
+	  margin-left: 15px;
+	}
+	.main-footer p {
+		width: 60%;
+		margin: 0 auto 20px;
+	}
+.footer-left {
+	text-align: left;
+}
+.footer-right {
+	display: none;
+}
+
+.footer-nav a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #4a4a4a;
+
+}
+
+	.main-footer {
+		display: flex;
+		flex-direction: row ;
+		justify-content: space-around;
+		align-items: center;
+		height: 50%;
+		width: 100%; 
+	}
+
+	.footer-left {
+		float: left;
+		width: 40%;
+	}
+	.footer-right {
+		float: right;
+		width: 50%;
+	}
+	
+
+	/* ---- Float clearfix ---- */
+
+.main-footer::after {
+	content: " ";
+	display: inline-block;
+	clear: both;
+}
+.nav-footer li {
+display: inline-block;
+padding: 5px;
+}
+
+.banner::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+	.row::after {
+		content: " ";
+		clear: both;
+		display: table;
+	}
+}
+
+@media (min-width: 1025px) {
+		
+	.banner {
+		display: flex;
+		margin:	auto;
+		flex-direction: row-reverse;
+		justify-content: space-around;
+	}
+	
+	.description-h {
+		float: left;
+	}
+
+	.logo {
+		float: right;
+		margin: 0 auto;
+	}
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+	.primary{
+		width: 33.333%;
+	}
+	.secondary { 
+		width: 33.333%;
+	}
+	.tertiary {
+		width: 33.333%;
+	}
+	.left,
+	.right {
+		width:48%;
+	}
+
+.main-footer {
+	display: flex;
+	flex-direction: row ;
+	justify-content: space-around;
+	align-items: center;
+	height: 50%;
+	width: 100%; 
+}
+
+#skills-desktop {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	height: 80%;
+	width: 50%; 
+}
+}
