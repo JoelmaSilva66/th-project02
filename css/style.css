@@ -30,7 +30,7 @@ a {
 	text-decoration: none;
 }
 img {
-	width: 100%;
+	max-width: 100%;
 }
 /* ================================= 
   Base Layout Styles
@@ -87,6 +87,10 @@ img {
 	color: #099af5;
 	
 }
+
+#Projects {
+	margin-top: 50px;
+}
 .main-footer{
 	text-align: center;
 	background: #d9e4ea;
@@ -127,30 +131,53 @@ img {
 .left {
 	float: left;
 	margin-top: 10px;
-}
+} 
 
 #skills {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-evenly;
+	justify-content: space-around;
 	align-items: center;
 	height: 100%;
-	width: 100%;
+	width: 100%; 
 }
 skill-pic {
 	width: 60%;
 	object-fit: cover;
+} 
+#skills img {
+	width: 300px;
 }
 .skill-text{
 	width: 70%;
-	justify-content: center;
 	font-size: 1.2rem;
   margin-left: 100px;
-  margin-right: 0;
+	margin-right: 0;
+	text-align: center;
 	color: rgb(126, 126, 126);
 }
 
 /* ---- Page Elements ---- */
+
+.nav-footer {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+}
+
+.nav-footer li {
+	display: inline-block;
+	margin-left: 15px
+}
+
+.footer-name {
+	padding: 0;
+	margin: 0;
+}
+
+.nav-footer .full {
+	display: none;
+}
 
 .logo {
 	float: right;
@@ -158,6 +185,7 @@ skill-pic {
 	padding-top: 20px;
 
 }
+
 
 /* ================================= 
   Media Queries
@@ -192,23 +220,30 @@ skill-pic {
     height: 38%;
     object-fit: cover;
 
-
-	}
-	.name,
+	} 
 	.col  {
 		float: left;
 	}
 	.primary,
-	.secondary {
+	.secondary,
+	.tertiary {
 		width: 50%;
+		min-height: 425px;
 	}
-	.main-nav { 
-		float:right;
-	}
+
 	.main-nav li  {
 		display: inline-block;
 	  margin-left: 15px;
 	}
+
+	#skills {
+		flex-direction: row;
+	}
+
+	#skills img {
+		width: 50%;
+	}
+
 	.main-footer {
 		display: flex;
 		flex-direction: row ;
@@ -218,6 +253,14 @@ skill-pic {
 		width: 100%; 
 	}
 
+	.nav-footer .top {
+		display: none;
+	}
+
+	.nav-footer .full {
+		display: inline-block;
+	}
+
 	/* ---- Float clearfix ---- */
 
 .main-footer::after {
@@ -225,11 +268,7 @@ skill-pic {
 	display: table;
 	clear: both;
 }
-.nav-footer li {
-display: inline-block;
-margin-left: 50px;
-padding: 10px;
-}
+
 
 .banner::after {
 	content: " ";
@@ -250,7 +289,24 @@ padding: 10px;
 	}
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
+
+	.main-header .container {
+		padding: 20px;
+	}
+
+	.name {
+		float: left;
+	}
+
+	.main-nav {
+		text-align: right;
+	}
+
+	.name a,
+	.main-nav a {
+		padding: 10px 0;
+	}
 		
 	.banner {
 		display: flex;
@@ -271,17 +327,20 @@ padding: 10px;
 		width: 80%;
 		max-width: 1150px;
 	}
-	.primary {
-		width: 33.333%;
-	}
+	.primary,
 	.secondary,
 	.tertiary {
 		width: 33.333%;
+		min-height: 425px;
+	}
+
+	.description {
+		margin: 0;
 	}
 	.left,
 	.right {
 		width:48%;
-	}
+	} 
 
 
 .main-footer {
